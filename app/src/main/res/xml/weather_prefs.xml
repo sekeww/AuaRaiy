@@ -1,0 +1,20 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/loc_title">
+        <Preference android:title="@string/pref_location_title"
+                    android:key="swa_loc">
+            <intent android:targetPackage="com.survivingwithandroid.weather"
+                    android:targetClass="com.survivingwithandroid.weather.settings.CityFinderActivity"
+                />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_unit_title">
+        <ListPreference android:key="swa_temp_unit"
+                        android:title="@string/temp_title"
+                        android:entryValues="@array/unit_values"
+                        android:entries="@array/unit_names"
+                        android:defaultValue="c" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
